@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-    nixpkgs.config.allowUnfree = true;
+    nixpkgs.config = {
+      allowUnfree = true;
+      permittedInsecurePackages = ["python-2.7.18.8"];
+    };
 
     environment.systemPackages = with pkgs; [
         # Desctop apps
@@ -10,6 +13,7 @@
         obsidian
         telegram-desktop
         firefox
+
 
         # Coding 
         glibc
@@ -52,7 +56,7 @@
         # Sound
         pipewire
 #        pipewire-pulse
-        pipewire-alsa
+#        pipewire-alsa
         wireplumber
         pulseaudio
 
