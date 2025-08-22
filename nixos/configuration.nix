@@ -3,11 +3,7 @@
 {
   imports = [
     ./packages.nix
-    #./wsl.nix
-  ];
-
-  disabledModules = [
-    ./wsl.nix
+    ./modules/bundle.nix
   ];
 
   networking.hostName = "artnix"; # Define your hostname.
