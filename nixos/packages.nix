@@ -1,9 +1,7 @@
 { pkgs, ... }:
 
 {
-    nixpkgs.config = {
-        permittedInsecurePackages = ["python-2.7.18.8"];
-    };
+    nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = with pkgs; [
         # Desctop apps
@@ -12,7 +10,6 @@
         obsidian
         telegram-desktop
         firefox
-
 
         # Coding 
         glibc
@@ -23,9 +20,9 @@
         python
         python3
         docker
-        dotnetCorePackages.sdk_9
-        dotnetCorePackages.runtime_9
-        rider
+#        dotnetCorePackages.sdk_9
+#        dotnetCorePackages.runtime_9
+#        rider
 
         # CLI utils
         wget
@@ -48,13 +45,13 @@
         # Windows manger and windows tools
         bspwm
         polybar
-        xfce4-clipman
+#        xfce4-clipman
         gammastep
         picom
 
         # Sound
         pipewire
-        pipewire-pulse
+#        pipewire-pulse
         pipewire-alsa
         wireplumber
         pulseaudio
