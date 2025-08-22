@@ -20,8 +20,7 @@
       system = "x86_64-linux";
     in {
 
-    # nixos - system hostname
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       specialArgs = {
         pkgs-stable = import nixpkgs-stable {
           inherit system;
@@ -31,10 +30,29 @@
       };
       modules = [
         ./nixos/configuration.nix
+        ./nixos/hardware/laptop.nix # Специфичные для ноута настройки (NVIDIA, power management)
       ];
     };
 
-    homeConfigurations.amper = home-manager.lib.homeManagerConfiguration {
+
+    nixosConfigurations.vm = nixpkgs.lib.nixosSystem {
+      specialArgs = {
+        pkgs-stable = import nixpkgs-stable {
+          inherit system;
+          config.allowUnfree = true;
+        };
+        inherit inputs system;
+      };
+      modules = [
+        ./nixos/configuration.nix
+        ./nixos/hardware/vm.nix    # Настройки для VM (отключение всего ненужного)
+        ({ modulesPath, ... }: {
+          imports = [ (modulesPath + "/virtualisation/qemu-vm.nix") ];
+        })
+      ];
+    };
+
+    homeConfigurations.pepegov = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [ ./home-manager/home.nix ];
     };
