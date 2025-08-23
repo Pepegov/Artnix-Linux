@@ -5,7 +5,7 @@
 
     environment.systemPackages = with pkgs; [
         # Desctop apps
-        discord
+        #discord
         gparted
         obsidian
         telegram-desktop
