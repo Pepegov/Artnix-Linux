@@ -10,6 +10,7 @@
         obsidian
         telegram-desktop
         firefox
+        obs-studio
 
 
         # Coding 
@@ -18,9 +19,9 @@
         gnumake
         gcc
         nodejs
-        python
         python3
         docker
+        code-cursor
 #        dotnetCorePackages.sdk_9
 #        dotnetCorePackages.runtime_9
 #        rider
