@@ -1,10 +1,7 @@
 { pkgs, ... }:
 
 {
-    nixpkgs.config = {
-      allowUnfree = true;
-      permittedInsecurePackages = ["python-2.7.18.8"];
-    };
+    nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = with pkgs; [
         # Desctop apps

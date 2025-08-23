@@ -12,4 +12,5 @@ sudo cp -r ./* /mnt/etc/nixos
 sudo rm -rf /mnt/etc/nixos/.git
 
 echo "Install nixos"
-sudo nixos-rebuild switch --flake /mnt/etc/nixos#vm
+sudo nixos-install --flake /mnt/etc/nixos#vm
+№sudo nixos-rebuild switch --flake /mnt/etc/nixos#vm
