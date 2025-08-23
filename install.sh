@@ -1,14 +1,17 @@
-#!/bin/bash
+#!/bin/sh
 
-RED='\033[0;31m'
-NOCOLOR='\033[0m'
+RED="\033[31m"
+RESET="\033[0m"
 
-echo "${RED}Partitioning of disk space${NOCOLOR}"
+printf "%sPartitioning of disk space%s\n" "$RED" "$RESET"
 sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ./disco.nix --yes-wipe-all-disks
-echo "${RED}Generate hardware config${NOCOLOR}"
+
+printf "%Generate hardware config%s\n" "$RED" "$RESET"
 sudo nixos-generate-config --root /mnt
-echo "${RED}Copy configuration to /mnt/etc/nixos${NOCOLOR}"
+
+printf "%Copy configuration to /mnt/etc/nixos%s\n" "$RED" "$RESET"
 sudo cp -r ./* /mnt/etc/nixos
 sudo rm -rf /mnt/etc/nixos/.git
-echo "${RED}Install nixos${NOCOLOR}"
+
+printf "%Install nixos%s\n" "$RED" "$RESET"
 sudo nixos-rebuild switch --flake /mnt/etc/nixos#vm
