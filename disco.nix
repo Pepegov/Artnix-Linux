@@ -18,6 +18,7 @@
                 format = "vfat";
                 mountpoint = "/boot";
                 mountOptions = [ "umask=0077" ];
+                extraFormatArgs = [ "-n" "BOOT" ];
               };
             };
 
@@ -26,6 +27,7 @@
               content = {
                 type = "btrfs";
                 extraArgs = [ "-f" ];
+                extraFormatArgs = [ "--label" "nixos" ];
                 subvolumes = {
                   "@root" = {
                     mountpoint = "/";

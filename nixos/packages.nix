@@ -6,11 +6,11 @@
     environment.systemPackages = with pkgs; [
         # Desctop apps
         #discord
-        gparted
-        obsidian
-        telegram-desktop
-        firefox
-        obs-studio
+#        gparted
+#        obsidian
+#        telegram-desktop
+#        firefox
+#        obs-studio
 
 
         # Coding 
@@ -20,8 +20,8 @@
         gcc
         nodejs
         python3
-        docker
-        code-cursor
+#        docker
+#        code-cursor
 #        dotnetCorePackages.sdk_9
 #        dotnetCorePackages.runtime_9
 #        rider
