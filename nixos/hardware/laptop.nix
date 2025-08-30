@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ../bootloader/grub.nix
+  ];
+
   # Здесь указываем видеодрайверы (важен порядок!)
   services.xserver.videoDrivers = [ "nvidia" "amdgpu" ];
 

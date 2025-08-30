@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ../bootloader/systemd-boot.nix
+  ];
+
   # Можем использовать другой видеодрайвер
   services.xserver.videoDrivers = [ "modesetting" ]; 
 

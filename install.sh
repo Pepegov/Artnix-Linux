@@ -13,3 +13,4 @@ sudo rm -rf /mnt/etc/nixos/.git
 echo "Install nixos"
 sudo nixos-install --flake /mnt/etc/nixos#vm
 #sudo nixos-rebuild switch --flake /mnt/etc/nixos#vm
+#nixos-enter --root /mnt
