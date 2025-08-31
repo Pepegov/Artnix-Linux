@@ -40,16 +40,16 @@
         bluez-tools
 
         # Xorg
-        xterm
-        xclip
-        xorg.xbacklight
+#        xterm
+#        xclip
+#        xorg.xbacklight
 
         # Windows manger and windows tools
-        bspwm
-        polybar
+#        bspwm
+#        polybar
 #        xfce4-clipman
-        gammastep
-        picom
+#        gammastep
+#        picom
 
         # Sound
         pipewire
