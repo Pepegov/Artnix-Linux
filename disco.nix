@@ -25,6 +25,7 @@
               size = "100%";
               content = {
                 type = "btrfs";
+                label = "nixos";
                 extraArgs = [ "-f" ];
                 subvolumes = {
                   "@root" = {
