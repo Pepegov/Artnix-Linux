@@ -3,8 +3,8 @@
 echo "Partitioning of disk space"
 sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ./disco.nix --yes-wipe-all-disks
 
-#echo "Generate hardware config"
-#sudo nixos-generate-config --root /mnt
+echo "Generate hardware config"
+sudo nixos-generate-config --root /mnt
 
 echo "Copy configuration to /mnt/etc/nixos"
 sudo cp -r ./* /mnt/etc/nixos
