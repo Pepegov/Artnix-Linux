@@ -23,7 +23,7 @@
 
             root = {
               size = "100%";
-              label = "nixos";
+              label = "root";
               content = {
                 type = "btrfs";
                 extraArgs = [ "-f" ];

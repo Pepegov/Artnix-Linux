@@ -13,19 +13,19 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-partlabel/nixos";
+    device = "/dev/disk/by-partlabel/root";
     fsType = "btrfs";
     options = [ "subvol=@root" "compress=zstd" "noatime" ];
   };
 
   fileSystems."/.snapshots" = {
-    device = "/dev/disk/by-partlabel/nixos";
+    device = "/dev/disk/by-partlabel/root";
     fsType = "btrfs";
     options = [ "subvol=@snapshots" ];
   };
 
   fileSystems."/.swapvol" = {
-    device = "/dev/disk/by-partlabel/nixos";
+    device = "/dev/disk/by-partlabel/root";
     fsType = "btrfs";
     options = [ "subvol=@swap" ];
   };
@@ -37,13 +37,13 @@
   };
 
   fileSystems."/home" = {
-    device = "/dev/disk/by-partlabel/nixos";
+    device = "/dev/disk/by-partlabel/root";
     fsType = "btrfs";
     options = [ "subvol=@home" "compress=zstd" "noatime" ];
   };
 
   fileSystems."/nix" = {
-    device = "/dev/disk/by-partlabel/nixos";
+    device = "/dev/disk/by-partlabel/root";
     fsType = "btrfs";
     options = [ "subvol=@nix" "compress=zstd" "noatime" ];
   };
