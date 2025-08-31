@@ -1,15 +1,4 @@
 {
-  fileSystems."/" = {
-    device = "/dev/disk/by-partlabel/root";
-    fsType = "btrfs";
-    options = [ "subvol=@root" "compress=zstd" "noatime" ];
-  };
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-partlabel/ESP";
-    fsType = "vfat";
-  };
-
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
