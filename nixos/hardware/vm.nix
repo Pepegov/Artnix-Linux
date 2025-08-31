@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../bootloader/systemd-boot.nix
+    ../bootloader/grub.nix
   ];
 
   # Можем использовать другой видеодрайвер
