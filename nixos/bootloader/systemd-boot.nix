@@ -36,5 +36,5 @@
     verbose = false;
     supportedFilesystems = [ "btrfs" ];
     kernelModules = [ "btrfs" ];
-  }
+  };
 }
