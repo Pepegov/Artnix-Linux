@@ -1,10 +1,4 @@
 {
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/nixos";
-    fsType = "btrfs";
-    options = [ "subvol=@root" "compress=zstd" "noatime" ];
-  };
-
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
@@ -16,20 +10,7 @@
       consoleMode = "auto";     
     };
 
-    grub.enable = false;           # Disable grub GRUB
+    grub.enable = false;           
     timeout = 5;
-  };
-
-  # Btrfs
-  swapDevices = [
-    {
-      device = "/.swapvol/swapfile";
-    }
-  ];
-
-  boot.initrd = {
-    verbose = false;
-    supportedFilesystems = [ "btrfs" ];
-    kernelModules = [ "btrfs" ];
   };
 }
