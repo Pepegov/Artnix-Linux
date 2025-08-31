@@ -19,13 +19,13 @@
   };
 
   fileSystems."/.snapshots" = {
-    device = "/dev/disk/by-partlabel/root";
+    device = "/dev/disk/by-partlabel/nixos";
     fsType = "btrfs";
     options = [ "subvol=@snapshots" ];
   };
 
   fileSystems."/.swapvol" = {
-    device = "/dev/disk/by-partlabel/root";
+    device = "/dev/disk/bya-partlabel/nixos";
     fsType = "btrfs";
     options = [ "subvol=@swap" ];
   };
@@ -37,13 +37,13 @@
   };
 
   fileSystems."/home" = {
-    device = "/dev/disk/by-partlabel/root";
+    device = "/dev/disk/by-partlabel/nixos";
     fsType = "btrfs";
     options = [ "subvol=@home" "compress=zstd" "noatime" ];
   };
 
   fileSystems."/nix" = {
-    device = "/dev/disk/by-partlabel/root";
+    device = "/dev/disk/by-partlabel/nixos";
     fsType = "btrfs";
     options = [ "subvol=@nix" "compress=zstd" "noatime" ];
   };
