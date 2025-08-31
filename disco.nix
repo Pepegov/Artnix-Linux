@@ -24,6 +24,7 @@
 
             root = {
               size = "100%";
+              name = "nixos";
               label = "nixos";
               content = {
                 type = "btrfs";

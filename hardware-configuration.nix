@@ -25,7 +25,7 @@
   };
 
   fileSystems."/.swapvol" = {
-    device = "/dev/disk/bya-partlabel/nixos";
+    device = "/dev/disk/by-partlabel/nixos";
     fsType = "btrfs";
     options = [ "subvol=@swap" ];
   };
