@@ -15,10 +15,10 @@
   };
 
   # Btrfs
-  boot.kernelParams = [
-    "root=LABEL=root"           
-    "rootflags=subvol=@root"    
-    "quiet"                     
+  swapDevices = [
+    {
+      device = "/.swapvol/swapfile";
+    }
   ];
 
   boot.initrd = {
