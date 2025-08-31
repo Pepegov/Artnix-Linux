@@ -10,7 +10,7 @@
             ESP = {
               priority = 1;
               name = "ESP";
-              label = "ESP"
+              label = "ESP";
               start = "1M";
               end = "512M";
               type = "EF00";
