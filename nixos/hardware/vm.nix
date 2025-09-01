@@ -14,4 +14,7 @@
 
   # Увеличиваем лимит памяти для QEMU, если нужно
   #virtualisation.graphics = false; # Если не нужен графический вывод из VM
+
+  services.qemuGuest.enable = true;
+  services.spice-vdagentd.enable = true;
 }

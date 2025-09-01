@@ -1,9 +1,9 @@
 {
   imports = [
-    #./sound.nix
+    ./sound.nix
     ./user.nix
-    #./xserver.nix
-    ./nm.nix
+    ./xserver.nix
+    ./networking.nix
     #./virtmanager.nix
     #./bluetooth.nix
   ];

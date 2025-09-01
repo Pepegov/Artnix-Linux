@@ -1,15 +1,4 @@
 {
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-    };
-    
-    systemd-boot = {
-      enable = true;
-      consoleMode = "auto";     
-    };
-
-    grub.enable = false;           
-    timeout = 5;
-  };
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 }

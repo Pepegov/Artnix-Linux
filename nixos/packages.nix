@@ -14,12 +14,12 @@
 
 
         # Coding 
-        glibc
-        coreutils
-        gnumake
-        gcc
-        nodejs
-        python3
+#        glibc
+#        coreutils
+#        gnumake
+#        gcc
+#        nodejs
+#        python3
 #        docker
 #        code-cursor
 #        dotnetCorePackages.sdk_9
@@ -36,8 +36,8 @@
         lux
         ntfs3g
         openssl
-        bluez
-        bluez-tools
+#        bluez
+#        bluez-tools
 
         # Xorg
 #        xterm
@@ -45,8 +45,10 @@
 #        xorg.xbacklight
 
         # Windows manger and windows tools
-#        bspwm
-#        polybar
+        bspwm
+        polybar
+        alacritty 
+        dmenu
 #        xfce4-clipman
 #        gammastep
 #        picom
@@ -70,4 +72,7 @@
     twemoji-color-font
     font-awesome
   ];
+
+  programs.firefox.enable = true;
+
 }
